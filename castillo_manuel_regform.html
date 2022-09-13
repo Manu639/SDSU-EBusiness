@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin-block: 0.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Register For Hogsmeade Field Trip</h1>
+    <form action="/?name1=firstName" method="GET">
+        <section id="personalInfo">
+            <h2>Personal Information</h2>
+            <label for="firstName">First Name: </label>
+            <input required type="text" id="firstName" name="firstName" placeholder="Enter First Name">
+            <label for="lastName">Last Name: </label>
+            <input required type="text" id="lastName" name="lastName" placeholder="Enter Last Name">
+            <div>
+                <label for="email">Email Address: </label>
+                <input required type="email" id="email" name="email" placeholder="Enter Email">
+                <label for="phone">Telephone: </label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number">
+            </div>
+            <div>
+                <label for="emergency">Emergency Contact: </label>
+                <input type="text" id="emergency" name="emergencyName" placeholder="Emergency Contact First">
+            </div>
+            <label for="firstName">Emergency Contact Relation: </label>
+            <div>
+                <input type="radio" name="contactRelation" value="parent">
+                <label for="parent">Parent</label>
+
+                <input type="radio" name="contactRelation" value="sibiling">
+                <label for="sibiling">Sibiling</label>
+
+                <input type="radio" name="contactRelation" value="other">
+                <label for="other">Other</label>
+            </div>
+        </section>
+        <section id="tripInfo">
+            <h2>Trip Information</h2>
+            <label for="datePicker">
+                Register for Shopping on:
+            </label>
+            <input style="display:block;" type="date" id="datePicker" name="registerDate">
+            <label for="location">Pick up Location</label>
+            <select style="display:block;" name="location">
+                <optgroup label="Hogwarts">
+                    <option selected value="dinningHall">Dinning Hall</option>
+                    <option value="chamberSecrets">Chamber of Secrets</option>
+                </optgroup>
+                <optgroup label="Other">
+                    <option value="forbiddenForest">Forbidden Forest</option>
+                    <option value="hagridsShack">Hagrid's Shack</option>
+                </optgroup>
+            </select>
+            <label for="agreement">I agree to behave on the trip.</label>
+            <input id="agreement" type="checkbox" name="behaviourAgreement" required>
+            <div class="checkbox">
+                <label for="futureTrips">Tell me about future trips.</label>
+                <input id="futureTrips" type="checkbox" name="futureTrips">
+            </div>
+            <div class=" buttons">
+                <button type="reset">Clear</button>
+                <button type="submit">Submit</button>
+            </div>
+        </section>
+    </form>
+</body>
+
+</html>
