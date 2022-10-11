@@ -16,12 +16,29 @@
     font-family: var(--titlesFontFamily);
 }
 
+.flex-column{
+    flex-direction: column;
+}
+
+.accent-bg{
+    background-color: var(--accentColor);
+}
+
+.primary-bg{
+    background-color: var(--primaryColor);
+}
+
 .grid{
     display: grid;
 }
 
 .flex{
     display: flex;
+}
+
+.flex-centered{
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -32,6 +49,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1em 1.5em;
+    margin-bottom: 3em;
 }
 
 .logo{
@@ -71,8 +89,9 @@
     margin-block: 2em;
     grid-template-areas:
     'firstText newsletterForm'
-    'secondText newsletterForm';
-    gap: 2em;
+    '. .'
+    'secondText secondText';
+    row-gap: 3em;
 }
 
 .mainParagraph{
@@ -92,7 +111,10 @@
 }
 
 .newsletterForm{
+    margin-block: 2em;
+    max-width: 30em;
     flex-direction: column;
+    align-self: center;
     place-self: center;
     grid-area: newsletterForm;
 }
@@ -123,17 +145,47 @@
     padding: .5em;
     font-size: var(--fontSizeResponsive);
     border: 0;
-    background-color: var(--accentColor);
+}
+
+.projectsSection{
+    margin: 2em;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .card{
+    max-width: 35em;
+
+    margin: 2em;
+    padding: 1.75em 1.25em;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     border-radius: 30px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 5px 2px, rgba(60, 64, 67, 0.15) 0px 1px 10px 1px;
+    border: 4px solid var(--accentColor);
+    background-color: var(--primaryColor);
 }
 
 .card__media{
     border-radius: 15px;
+}
+
+.card__info{
+    text-align: center;
+    color: var(--alternativeTextColor);
+    margin: 1em;
+}
+
+.card__CTA{
+    width: 100%;
+    margin-top: 1em;
+    text-align: center;
+    text-decoration: none;
+    color: var(--alternativeTextColor);
+    border: 2px solid var(--accentColor);
 }
 
 @media (max-width:70em){
@@ -151,6 +203,10 @@
     'newsletterForm';
     gap: 4em;
 }
+
+    .projectsSection {
+        flex-direction: column;
+    }
 
 }
 

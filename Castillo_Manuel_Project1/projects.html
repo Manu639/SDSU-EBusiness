@@ -12,11 +12,11 @@
 
 <body>
     <header>
-        <nav class="mainNav">
+        <nav class=" flex mainNav">
             <a class="logo" href="./index.html">
                 <img class="" src="./assets/principal-positivo.svg" alt="">
             </a>
-            <ul role="list" class="menu">
+            <ul role="list" class="flex menu">
                 <li class="menu__item"><a class="menu__link titleFont menu__link--selected" href="./projects.html">I am doing this</a></li>
                 <li class="menu__item"><a class="menu__link titleFont" href="./futureGoals.html">I'll be doing this</a></li>
                 <li class="menu__item"><a class="menu__link titleFont" href="./resume.html">Resume?</a></li>
@@ -25,32 +25,37 @@
         </nav>
     </header>
     <main>
-        <section>
-            <p></p>
+        <section class="flex flex-centered">
+            <p class="mainParagraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro ratione doloremque, error tempora illum voluptate ea exercitationem doloribus eius consequuntur quae at maxime ullam atque reiciendis asperiores maiores quam corrupti nihil. Corporis voluptatum nostrum dicta, ut ratione quidem, iste laudantium quo excepturi enim neque cumque iure a quis, repudiandae totam itaque sit rerum! Enim eos quibusdam mollitia tenetur. Itaque, optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ea id et illo, eius dolorum rerum soluta iusto facere ab quisquam nam exercitationem similique omnis ut quibusdam magnam delectus voluptas, non, neque odio possimus harum molestiae totam. Facere dolorem quidem autem earum laboriosam, maxime fugit architecto, atque ducimus necessitatibus distinctio.</p>
         </section>
-        <section>
-            <article>
-                <img src="" alt="" srcset="">
-                <p></p>
-                <a href=""></a>
+        <section class="flex projectsSection">
+            <article class="flex card">
+                <img class="card__media" src="./assets/thumbnail.jpeg" alt="" srcset="">
+                <p class="card__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem perspiciatis, expedita ad temporibus unde tempora quaerat quae. Laboriosam, eveniet iste.</p>
+                <a class="button card__CTA titleFont" href="">Click to see more</a>
             </article>
-            <article>
-                <img src="" alt="" srcset="">
-                <p></p>
-                <a href=""></a>
+            <article class="flex card">
+                <img class="card__media" src="./assets/thumbnail.jpeg" alt="" srcset="">
+                <p class="card__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem perspiciatis, expedita ad temporibus unde tempora quaerat quae. Laboriosam, eveniet iste.</p>
+                <a class="button card__CTA titleFont" href="">Click to see more</a>
             </article>
-            <article>
-                <img src="" alt="" srcset="">
-                <p></p>
-                <a href=""></a>
+            <article class="flex card">
+                <img class="card__media" src="./assets/thumbnail.jpeg" alt="" srcset="">
+                <p class="card__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem perspiciatis, expedita ad temporibus unde tempora quaerat quae. Laboriosam, eveniet iste.</p>
+                <a class="button card__CTA titleFont" href="">Click to see more</a>
             </article>
         </section>
     </main>
-    <footer>
-        <p></p>
-        <form action="">
-            <input type="email">
-            <button type="submit"></button>
+    <footer class="flex flex-centered flex-column">
+        <p class="mainParagraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam pariatur quia autem perferendis placeat quae expedita molestias non itaque provident similique sequi repudiandae aut illum totam, facere sapiente alias quo impedit reiciendis unde. Aliquam deserunt id quas cumque qui corporis! Illum facere inventore, atque officia animi rerum eum facilis maxime modi velit autem sit provident deserunt quas dolore blanditiis perspiciatis?</p>
+        <form class="flex newsletterForm" action="">
+            <h2 class="newsletterFormTitle titleFont">A Wealth Tip Every Day</h2>
+            <input class="inputField" type="text" placeholder="Put your email here">
+            <div class="formField">
+                <input class="inputField" type="checkbox" name="privacyPolicy" id="privacyPolicy">
+                <label for="privacyPolicy">Click here to acknowledge the privacy policy </label>
+            </div>
+            <button class="button titleFont accent-bg" type="submit">Subscribe here</button>
         </form>
     </footer>
 </body>
