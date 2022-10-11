@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@700&display=swap');
+
+:root{
+    --accentColor: hsl(27, 86%, 52%);
+    --primaryColor: hsl(240, 4%, 9%);
+    --primaryTextColor:hsl(0, 0%, 0%);
+    --alternativeTextColor: hsl(0, 0%, 100%);
+    --titlesFontFamily: 'Overpass', sans-serif;
+    --regularTextFontFamily: 'Arial', sans-serif;
+    --fontSizeResponsive: clamp(1rem, 2vw, 1.25em );
+}
+
+
+/* Utility classes*/
+.titleFont{
+    font-family: var(--titlesFontFamily);
+}
+
+.grid{
+    display: grid;
+}
+
+.flex{
+    display: flex;
+}
+
+
+/*BEM classes*/
+
+.mainNav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 1.5em;
+}
+
+.logo{
+    width: clamp(15em,20vw,20em);
+    padding: 1em;
+}
+
+
+.menu{
+    margin-block: 1.5em;
+}
+
+.menu__item{
+    margin: 2em;
+    list-style: none;
+}
+
+.menu__link{
+    color: inherit;
+    font-size: var(--fontSizeResponsive);
+    text-decoration: none;
+    padding: .5em;
+}
+
+.menu__link:hover{
+    border-bottom: 2px var(--accentColor) solid;
+}
+
+.menu__link--selected{
+    color:var(--accentColor);
+    
+}
+
+
+.introSection{
+    grid-template-columns: repeat(2,1fr);
+    margin-block: 2em;
+    grid-template-areas:
+    'firstText newsletterForm'
+    'secondText newsletterForm';
+    gap: 2em;
+}
+
+.mainParagraph{
+    max-width: 75%;
+    font-size: var(--fontSizeResponsive);
+    line-height: 2;
+}
+
+.firstText{
+    place-self: center;
+    grid-area: firstText;
+}
+
+.secondText{
+    place-self: center;
+    grid-area: secondText;
+}
+
+.newsletterForm{
+    flex-direction: column;
+    place-self: center;
+    grid-area: newsletterForm;
+}
+
+.newsletterFormTitle{
+    font-size: var(--fontSizeResponsive);
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.formField{
+    display: flex;
+    align-items: center;
+}
+
+.inputField{
+    min-height: 3em;
+    padding: 0.5em;
+    margin-inline: 0.5em;
+    border: 2px dashed var(--accentColor);
+    border-radius: 5px;
+}
+
+
+.button{
+    margin: .5em;
+    border-radius: 15px;
+    padding: .5em;
+    font-size: var(--fontSizeResponsive);
+    border: 0;
+    background-color: var(--accentColor);
+}
+
+
+.card{
+    border-radius: 30px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 5px 2px, rgba(60, 64, 67, 0.15) 0px 1px 10px 1px;
+}
+
+.card__media{
+    border-radius: 15px;
+}
+
+@media (max-width:70em){
+
+    .mainNav{
+        flex-direction: column;
+        padding-inline:0;
+    }
+
+    .introSection{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'firstText'
+    'secondText'
+    'newsletterForm';
+    gap: 4em;
+}
+
+}
+
+@media (max-width:45em){
+
+    .menu{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu__link{
+        border-block: 2px dashed orange;
+    }
+}
